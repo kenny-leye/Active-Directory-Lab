@@ -74,4 +74,7 @@ Successful connectivity confirms that the two machines can communicate over the 
 
 <img src="1/Screenshot 2026-09-20 014816.png" >
 
+##  Phase 2: Active Directory Domain Setup
+
+
 
