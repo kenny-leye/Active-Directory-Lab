@@ -75,6 +75,70 @@ Successful connectivity confirms that the two machines can communicate over the 
 <img src="1/Screenshot 2026-09-20 014816.png" >
 
 ##  Phase 2: Active Directory Domain Setup
+## Step 1: Install "Active Directory" on DC-1. Set up DC-1 as a new domain.
+<img src= "/IMG_2619.jpeg">
+
+## Step 2: Promote as a DC: Setup a new forest as mydomain.com (can be anything, just remember what it is)
+<img src= "/IMG_2620.jpeg">
+<img src= "/IMG_2621.jpeg">
+
+## Step 3: Restart and then Remote Desktop back into DC-1 as user: mydomain.com\labuser
+
+##Step 4: In Active Directory Users and Computers (ADUC), create an Organizational Unit (OU) called “_EMPLOYEES” and “_ADMINS” 
+
+<img src= "/IMG_2622.jpeg">
+<img src= "/IMG_2624.jpeg">
+
+## Step 5: Create a new employee named “Jane Doe” (same password) with the username of “jane_admin” to the _ADMINS OU. Then add jane_admin to the “Domain Admins” Security Group 
+
+<img src= "/IMG_2626.jpeg">
+<img src= "/IMG_2627.jpeg">
+<img src= "/IMG_2628.jpeg">
+
+## Step 6: Log out/close the Remote Desktop connection to DC-1 and log back in as “mydomain.com\jane_admin”
+
+<img src= "/IMG_2630.jpeg">
+
+## Step 7: Join Client-1 DNS to your domain (mydomain.com).</p>
+
+<img src= "/IMG_2631.jpeg">
+<img src= "/IMG_2632.jpeg">
+
+## Step 8: Login to Client-1 as the original local admin (labuser) and join it to the domain (computer will restart)
+
+
+## Step 9: When Client-1 restarts log back in (Remote Desktop) as mydomain.com\jane_admin and verify that client-1 shows up in ADUC.
+
+<img src= "/IMG_2634.jpeg">
+
+## Step 10: Use Remote Desktop in the system settings to allow domain users access for all non-admin users on Client-1 VM under "remote desktop" --> "select users or groups that can remotely access this PC" --> click "add" and type in "domain users". 
+<img src= "/IMG_2636.jpeg">
+<img src= "/IMG_2637.jpeg">
+
+
+
+## Step 11: Login to DC-1 as jane_admin
+<img src= "/IMG_2639.jpeg">
+
+ ## Step 12: Open PowerShell_ise as an administrator
+<img src= "/IMG_2640.jpeg">
+
+## Step 13: Copy and paste this [Script]("https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1"). This will create new users with random names. This is done to simulate employees within the company.
+
+<img src= "/IMG_2641.jpeg">
+<img src= "/IMG_2642.jpeg">
+
+## Step 14: Pick any of the newly generated user and login on Client-1 VM. The login attempt with the user's name and generic password from the script should be successful.
+<img src= "/IMG_2643.jpeg">
+<img src= "/IMG_2645.jpeg">
+<img src= "/IMG_2646.jpeg">
+
+
+
+
+
+
+
 
 
 
