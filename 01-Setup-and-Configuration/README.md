@@ -13,11 +13,9 @@ The machines communicate through an Azure Virtual Network and are configured wit
 ## 1. Create Azure Resource Group
 
 Creating a dedicated Azure Resource Group to contain the virtual machines, networking resources, and other components used throughout the lab.
-
-<p align="center">
-  <img src="" width="700" style="border-radius:10px; border:1px solid #ccc;" />
-  <img src="" width="700" style="border-radius:10px; border:1px solid #ccc;" />
-</p>
+  <img src="01-Setup-and-Configuration/1
+/Screenshot 2026-09-19 104615.png
+">
 
 
 ## 2. Create Virtual Network
